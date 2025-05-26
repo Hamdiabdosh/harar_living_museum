@@ -1,0 +1,312 @@
+<?php
+// Set content type
+header('Content-Type: text/html; charset=utf-8');
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Harar Living Museum</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- FullCalendar CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/events.css">
+</head>
+<body>
+    <header>
+        <!-- Include Navbar -->
+        <?php include '../includes/navbar.php'; ?>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section position-relative text-white py-5" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/images/harar-festival.jpg') center/cover;">
+            <div class="container">
+                <div class="row min-vh-50 align-items-center">
+                    <div class="col-lg-8">
+                        <h1 class="display-4 fw-bold mb-4">Events Calendar</h1>
+                        <p class="lead">Experience Harar's living culture year-round — discover what's happening in the city!</p>
+                        <div class="mt-4">
+                            <a href="#upcoming-events" class="btn btn-primary me-2">Upcoming Events</a>
+                            <a href="#calendar" class="btn btn-outline-light">View Calendar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Categories & Filters -->
+        <section class="py-4 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="d-flex justify-content-center flex-wrap gap-2">
+                            <button class="btn btn-outline-primary active" data-category="all">All Events</button>
+                            <button class="btn btn-outline-primary" data-category="religious">
+                                <i class="fas fa-mosque me-2"></i>Religious
+                            </button>
+                            <button class="btn btn-outline-primary" data-category="festival">
+                                <i class="fas fa-masks-theater me-2"></i>Festival/Cultural
+                            </button>
+                            <button class="btn btn-outline-primary" data-category="educational">
+                                <i class="fas fa-book me-2"></i>Educational
+                            </button>
+                            <button class="btn btn-outline-primary" data-category="tour">
+                                <i class="fas fa-map-marked-alt me-2"></i>Guided Tours
+                            </button>
+                            <button class="btn btn-outline-primary" data-category="exhibit">
+                                <i class="fas fa-palette me-2"></i>Exhibits
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Events -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Featured Events</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <img src="../assets/images/events/ashura.jpg" class="card-img-top" alt="Ashura Celebration">
+                            <div class="card-body">
+                                <h3 class="h5">Ashura Celebration</h3>
+                                <p class="text-muted"><i class="fas fa-calendar me-2"></i>Date: Varies (Islamic Calendar)</p>
+                                <p>Experience the vibrant Ashura celebrations in Harar, featuring traditional processions, prayers, and community gatherings.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-primary">Religious</span>
+                                    <button class="btn btn-outline-primary btn-sm">Notify Me</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <img src="../assets/images/events/hyena-festival.jpg" class="card-img-top" alt="Hyena Festival">
+                            <div class="card-body">
+                                <h3 class="h5">Hyena Festival</h3>
+                                <p class="text-muted"><i class="fas fa-calendar me-2"></i>Date: Annual Event</p>
+                                <p>Witness the unique tradition of hyena feeding, a practice that has been part of Harar's culture for generations.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-success">Cultural</span>
+                                    <button class="btn btn-outline-primary btn-sm">Notify Me</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calendar View -->
+        <section id="calendar" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5">Event Calendar</h2>
+                <div class="row">
+                    <div class="col-12">
+                        <div id="calendar-container"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Events -->
+        <section id="upcoming-events" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Upcoming Events</h2>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <!-- Event 1 -->
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-3 text-center">
+                                        <div class="date-box p-3 bg-primary text-white rounded">
+                                            <h3 class="h2 mb-0">15</h3>
+                                            <p class="mb-0">March</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <h3 class="h5">Traditional Coffee Ceremony</h3>
+                                        <p class="text-muted"><i class="fas fa-clock me-2"></i>2:00 PM - 4:00 PM</p>
+                                        <p>Experience the traditional Harari coffee ceremony, learn about its cultural significance, and enjoy authentic coffee preparation.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="badge bg-info">Cultural</span>
+                                            <button class="btn btn-primary btn-sm">Add to Trip Plan</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Event 2 -->
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-3 text-center">
+                                        <div class="date-box p-3 bg-primary text-white rounded">
+                                            <h3 class="h2 mb-0">20</h3>
+                                            <p class="mb-0">March</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <h3 class="h5">Islamic Art Exhibition</h3>
+                                        <p class="text-muted"><i class="fas fa-clock me-2"></i>10:00 AM - 6:00 PM</p>
+                                        <p>Explore the rich tradition of Islamic art in Harar, featuring calligraphy, architecture, and traditional crafts.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="badge bg-warning">Exhibit</span>
+                                            <button class="btn btn-primary btn-sm">Add to Trip Plan</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Submission Form -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="card">
+                            <div class="card-body">
+                                <h2 class="text-center mb-4">Submit an Event</h2>
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="eventTitle" class="form-label">Event Title</label>
+                                        <input type="text" class="form-control" id="eventTitle" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="eventDate" class="form-label">Date</label>
+                                        <input type="date" class="form-control" id="eventDate" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="eventTime" class="form-label">Time</label>
+                                        <input type="time" class="form-control" id="eventTime" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="eventCategory" class="form-label">Category</label>
+                                        <select class="form-select" id="eventCategory" required>
+                                            <option value="">Select category...</option>
+                                            <option value="religious">Religious</option>
+                                            <option value="festival">Festival/Cultural</option>
+                                            <option value="educational">Educational</option>
+                                            <option value="tour">Guided Tour</option>
+                                            <option value="exhibit">Exhibit</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="eventDescription" class="form-label">Description</label>
+                                        <textarea class="form-control" id="eventDescription" rows="3" required></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="eventLocation" class="form-label">Location</label>
+                                        <input type="text" class="form-control" id="eventLocation" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="eventImage" class="form-label">Event Image</label>
+                                        <input type="file" class="form-control" id="eventImage" accept="image/*">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100">Submit Event</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Calendar -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 text-center">
+                        <h2 class="mb-4">Download Event Calendar</h2>
+                        <p class="mb-4">Get a printable version of our event calendar for offline use.</p>
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-download me-2"></i>Download PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap JS Bundle-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FullCalendar JS -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Load navbar and footer
+        fetch('../includes/navbar.php')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+
+        fetch('../includes/footer.php')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+
+        // Initialize FullCalendar
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar-container');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                },
+                events: [
+                    {
+                        title: 'Ashura Celebration',
+                        start: '2024-03-15',
+                        className: 'bg-primary'
+                    },
+                    {
+                        title: 'Traditional Coffee Ceremony',
+                        start: '2024-03-20',
+                        className: 'bg-success'
+                    },
+                    {
+                        title: 'Islamic Art Exhibition',
+                        start: '2024-03-25',
+                        className: 'bg-warning'
+                    }
+                ]
+            });
+            calendar.render();
+        });
+
+        // Event filtering
+        document.querySelectorAll('[data-category]').forEach(button => {
+            button.addEventListener('click', () => {
+                const category = button.dataset.category;
+                // Add filtering logic here
+                document.querySelectorAll('[data-category]').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                button.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html> 
