@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harar Living Museum - Home</title>
-    <!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-  
-    
-      <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
                 <div class="container">
                   <a class="navbar-brand fw-bold" href="../index.html">Harar: The Living Museum</a>
                   
@@ -76,21 +63,3 @@
                   </div>
                 </div>
       </nav>
-              
-        
-
-
-    <main>
-        <section class="hero">
-            <h1>Welcome to Harar Living Museum</h1>
-            <p>Discover the rich cultural heritage of Harar, Ethiopia</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Harar Living Museum. All rights reserved.</p>
-    </footer>
-
-    <script src="assets/js/main.js"></script>
-</body>
-</html> 
