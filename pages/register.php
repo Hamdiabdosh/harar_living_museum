@@ -14,7 +14,8 @@ header('Content-Type: text/html; charset=utf-8');
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body class="bg-light">
+<body>
+    <?php include '../includes/background.php'; ?>
     <header>
         <nav>
             <?php include '../includes/navbar.php'; ?>

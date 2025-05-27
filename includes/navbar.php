@@ -5,7 +5,9 @@ $basePath = $isPage ? '../' : '';
 ?>
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
     <div class="container">
-        <a class="navbar-brand fw-bold" href="<?php echo $basePath; ?>index.php">Harar: The Living Museum</a>
+        <a class="navbar-brand" href="<?php echo $basePath; ?>index.php">
+            <img src="<?php echo $basePath; ?>assets/images/Horizontal-Logo.png" alt="Harar Living Museum" height="40">
+        </a>
         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
             <span class="navbar-toggler-icon"></span>
