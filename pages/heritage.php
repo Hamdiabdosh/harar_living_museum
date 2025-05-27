@@ -1,116 +1,58 @@
 <?php
 // Set content type
 header('Content-Type: text/html; charset=utf-8');
+
+// Set page title
+$pageTitle = 'Heritage';
+
+// Include header
+include '../includes/header.php';
+
+// Include navbar
+include '../includes/navbar.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heritage - Harar Living Museum</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../assets/css/main.css">
-</head>
-<body>
-    <?php include '../includes/background.php'; ?>
-    <header>
-        <!-- Include Navbar -->
-        <nav>
-            <?php include '../includes/navbar.php'; ?>
-        </nav>
-    </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero-section position-relative text-white py-5" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/images/harar-culture.jpg') center/cover;">
-            <div class="container">
-                <div class="row min-vh-50 align-items-center">
-                    <div class="col-lg-8">
-                        <h1 class="display-4 fw-bold mb-4">Heritage & Traditions</h1>
-                        <p class="lead">Discover the living culture of Harar, where ancient traditions continue to thrive in the heart of Ethiopia.</p>
-                        <blockquote class="blockquote mt-4">
-                            <p class="mb-0"><i class="fas fa-quote-left me-2"></i>Harar is not just a city of walls and gates, but a living museum of traditions that have been preserved and cherished for centuries.</p>
-                            <?php include '../includes/footer.php'; ?>
-                        </blockquote>
-                    </div>
+<main>
+    <!-- Hero Section -->
+    <section class="hero-section position-relative text-white py-5" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/images/banner/shewal eid2.jpg') center/cover;">
+        <div class="container">
+            <div class="row min-vh-50 align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-4">Harari Heritage & Traditions</h1>
+                    <p class="lead">Discover the living culture of Harar, where ancient traditions continue to thrive in the heart of Ethiopia.</p>
+                    <blockquote class="blockquote mt-4">
+                        <p class="mb-0"><i class="fas fa-quote-left me-2"></i>Harar is not just a city of walls and gates, but a living museum of traditions that have been preserved and cherished for centuries.</p>
+                    </blockquote>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Festivals & Celebrations -->
-        <section class="py-5">
-            <div class="container">
-                <h2 class="text-center mb-5">Festivals & Celebrations</h2>
-                <div class="row">
-                    <div class="col-md-6 mb-4">
-                        <div class="card h-100">
-                            <img src="../assets/images/ashura.jpg" class="card-img-top" alt="Ashura Celebration">
-                            <div class="card-body">
-                                <h3 class="h5">Ashura</h3>
-                                <p class="text-muted">Islamic celebration with unique Harari traditions</p>
-                                <p>Experience the vibrant Ashura celebrations in Harar, where Islamic traditions blend with local customs. The streets come alive with processions, prayers, and community gatherings.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="card h-100">
-                            <img src="../assets/images/eid.jpg" class="card-img-top" alt="Eid Celebration">
-                            <div class="card-body">
-                                <h3 class="h5">Eid Celebrations</h3>
-                                <p class="text-muted">Eid al-Fitr & Eid al-Adha</p>
-                                <p>Join the joyous Eid celebrations in Harar, where families gather for prayers, feasts, and traditional performances. Experience the warmth of Harari hospitality during these special occasions.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Traditional Clothing -->
-        <section class="py-5 bg-light">
-            <div class="container">
-                <h2 class="text-center mb-5">Traditional Clothing</h2>
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h3 class="h5">Women's Attire</h3>
-                                <p>The traditional Harari women's dress, known as Dirac, features vibrant colors and intricate patterns. The gabi (shawl) and headwrap complete the ensemble, each element carrying cultural significance.</p>
-                                <ul class="list-unstyled">
-                                    <li><i class="fas fa-check-circle me-2"></i>Dirac: Colorful traditional dress</li>
-                                    <li><i class="fas fa-check-circle me-2"></i>Gabi: Elegant shawl</li>
-                                    <li><i class="fas fa-check-circle me-2"></i>Headwrap: Cultural identity</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="../assets/images/traditional-clothing.jpg" alt="Traditional Harari Clothing" class="img-fluid rounded shadow">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Language & Oral Traditions -->
-        <section class="py-5">
-            <div class="container">
-                <h2 class="text-center mb-5">Language & Oral Traditions</h2>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="card">
-                            <div class="card-body">
-                                <h3 class="h5">Harari Language (Adaregna)</h3>
-                                <p>The Harari language, Adaregna, is a unique Semitic language spoken exclusively in Harar. It serves as a living connection to the city's rich history and cultural identity.</p>
-                                <div class="mt-4">
-                                    <h4 class="h6">Common Phrases</h4>
+    <!-- Religious Significance -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Religious Significance</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="h5"><i class="fas fa-mosque me-2"></i>Fourth Holiest City in Islam</h3>
+                            <p>Harar is celebrated as the fourth holiest city in Islam, boasting over 80 mosques and numerous shrines. The Harari people primarily practice Sunni Islam and Sufism, with spiritual events such as Ashura holding deep significance.</p>
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <h4 class="h6">Key Religious Events</h4>
                                     <ul class="list-unstyled">
-                                        <li><strong>Welcome:</strong> Selam</li>
-                                        <li><strong>Thank you:</strong> Ameseghinalehu</li>
-                                        <li><strong>How are you:</strong> Ishee kee</li>
+                                        <li><i class="fas fa-check-circle me-2"></i>Ashura Commemoration</li>
+                                        <li><i class="fas fa-check-circle me-2"></i>Eid al-Fitr Celebrations</li>
+                                        <li><i class="fas fa-check-circle me-2"></i>Eid al-Adha Observances</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h4 class="h6">Spiritual Practices</h4>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check-circle me-2"></i>Daily Prayers</li>
+                                        <li><i class="fas fa-check-circle me-2"></i>Sufi Traditions</li>
+                                        <li><i class="fas fa-check-circle me-2"></i>Shrine Visitations</li>
                                     </ul>
                                 </div>
                             </div>
@@ -118,115 +60,161 @@ header('Content-Type: text/html; charset=utf-8');
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Daily Rituals -->
-        <section class="py-5 bg-light">
-            <div class="container">
-                <h2 class="text-center mb-5">Daily Rituals & Social Customs</h2>
-                <div class="row">
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h3 class="h5"><i class="fas fa-coffee me-2"></i>Coffee Ceremony</h3>
-                                <p>The Harari coffee ceremony is a UNESCO-recognized cultural tradition that brings communities together. Experience the ritual of roasting, grinding, and brewing coffee in the traditional way.</p>
+    <!-- Traditional Wedding Customs -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Traditional Wedding Customs</h2>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h5"><i class="fas fa-ring me-2"></i>Nikkah & Sirri</h3>
+                                    <p>The formal marriage contract (Nikkah) is followed by the Sirri tradition, where elderly women prepare special bread and take it to the shrine of Ay Abida for blessings.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h3 class="h5"><i class="fas fa-utensils me-2"></i>Community Meals</h3>
-                                <p>Sharing meals is central to Harari culture. Learn about traditional dining customs, food etiquette, and the importance of communal eating in strengthening social bonds.</p>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h5"><i class="fas fa-bread-slice me-2"></i>Waqaalim & Bun Wa Halawa</h3>
+                                    <p>Traditional celebrations include Waqaalim distribution and the bride's family bringing coffee and sweets to the Jumuah Mosque for blessings.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h3 class="h5"><i class="fas fa-hands me-2"></i>Greetings & Respect</h3>
-                                <p>Discover the proper ways to greet elders, show respect, and participate in social interactions according to Harari customs and traditions.</p>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h5"><i class="fas fa-users me-2"></i>Aruz Mawalal</h3>
+                                    <p>The bride, accompanied by single ladies in cultural attire, walks through Jugol streets to invite family and friends to the wedding celebration.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Traditional Art & Craftsmanship -->
-        <section class="py-5">
-            <div class="container">
-                <h2 class="text-center mb-5">Traditional Art & Craftsmanship</h2>
-                <div class="row">
-                    <div class="col-md-6 mb-4">
-                        <div class="card">
-                            <img src="../assets/images/basket-weaving.jpg" class="card-img-top" alt="Basket Weaving">
-                            <div class="card-body">
-                                <h3 class="h5">Basket Weaving</h3>
-                                <p>Harari basket weaving is a centuries-old craft that produces intricate designs used in daily life. Each pattern tells a story and represents different aspects of Harari culture.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="card">
-                            <img src="../assets/images/embroidery.jpg" class="card-img-top" alt="Embroidery">
-                            <div class="card-body">
-                                <h3 class="h5">Embroidery</h3>
-                                <p>Traditional Harari embroidery adorns clothing and household items with beautiful patterns that have been passed down through generations.</p>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h5"><i class="fas fa-music me-2"></i>Raga Karabu & Zagan Karabu</h3>
+                                    <p>Traditional songs and dances performed by elderly women, celebrating the union and demonstrating the bride's readiness for marriage.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Multimedia Gallery -->
-        <section class="py-5 bg-light">
-            <div class="container">
-                <h2 class="text-center mb-5">Cultural Gallery</h2>
-                <div class="row g-3">
-                    <div class="col-md-4">
-                        <a href="../assets/images/gallery1.jpg" data-lightbox="heritage" data-title="Traditional Wedding Ceremony">
-                            <img src="../assets/images/gallery1.jpg" alt="Wedding Ceremony" class="img-fluid rounded">
-                        </a>
+    <!-- Traditional Houses -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Traditional Houses (Gey Gar)</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="h5">Architectural Heritage</h3>
+                            <p>Harari traditional houses, known as Gey Gar, are a hallmark of Harari architectural genius and cultural identity. These homes feature:</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle me-2"></i>Central courtyard (Gidir Magala)</li>
+                                <li><i class="fas fa-check-circle me-2"></i>Intricate Islamic art</li>
+                                <li><i class="fas fa-check-circle me-2"></i>Colorful wall baskets</li>
+                                <li><i class="fas fa-check-circle me-2"></i>Handwoven carpets</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <a href="../assets/images/gallery2.jpg" data-lightbox="heritage" data-title="Coffee Ceremony">
-                            <img src="../assets/images/gallery2.jpg" alt="Coffee Ceremony" class="img-fluid rounded">
-                        </a>
+                </div>
+                <div class="col-md-6">
+                    <img src="../assets/images/traditional-house.jpg" alt="Traditional Harari House" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultural Traditions -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Cultural Traditions</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h5"><i class="fas fa-coffee me-2"></i>Coffee Ceremony</h3>
+                            <p>The Harari coffee ceremony is a UNESCO-recognized cultural tradition that reflects the community's deep-rooted appreciation for hospitality. The ritual involves roasting beans, grinding them by hand, and brewing in a traditional jebena.</p>
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <a href="../assets/images/gallery3.jpg" data-lightbox="heritage" data-title="Traditional Dance">
-                            <img src="../assets/images/gallery3.jpg" alt="Traditional Dance" class="img-fluid rounded">
-                        </a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h5"><i class="fas fa-music me-2"></i>Music & Oral Traditions</h3>
+                            <p>Traditional instruments like the kabaro (drum), masenqo (lute), and washint (flute) are used in musical sessions led by elders, passing down centuries-old compositions and stories.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h5"><i class="fas fa-paw me-2"></i>Hyena Feeding</h3>
+                            <p>A unique tradition where "hyena men" feed hyenas, helping maintain city cleanliness and believed to protect residents from evil spirits. This practice demonstrates the community's harmonious relationship with wildlife.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Download Guide -->
-        <section class="py-5">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-8 text-center">
-                        <h2 class="mb-4">Download Our Heritage Guide</h2>
-                        <p class="lead mb-4">Get a comprehensive guide to Harar's cultural heritage, including traditions, customs, and practical information for visitors.</p>
-                        <a href="#" class="btn btn-primary btn-lg">
-                            <i class="fas fa-download me-2"></i>Download Guide
-                        </a>
+    <!-- Traditional Crafts -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Traditional Crafts</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="../assets/images/basket-weaving.jpg" class="card-img-top" alt="Basket Weaving">
+                        <div class="card-body">
+                            <h3 class="h5">Basketry & Mesob</h3>
+                            <p>Harari basketry is renowned for its colorful designs and complex geometric patterns. The Mesob, a traditional basket used to store injera, is a cultural symbol of Ethiopia and showcases exceptional craftsmanship.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="../assets/images/embroidery.jpg" class="card-img-top" alt="Embroidery">
+                        <div class="card-body">
+                            <h3 class="h5">Embroidery & Textiles</h3>
+                            <p>Traditional Harari embroidery adorns clothing and household items with beautiful patterns that have been passed down through generations, reflecting the community's artistic heritage.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    
-    <div id="footer-placeholder"></div>
+    <!-- Download Guide -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h2 class="mb-4">Download Our Heritage Guide</h2>
+                    <p class="lead mb-4">Get a comprehensive guide to Harar's cultural heritage, including traditions, customs, and practical information for visitors.</p>
+                    <a href="#" class="btn btn-primary btn-lg">
+                        <i class="fas fa-download me-2"></i>Download Guide
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 
-    <!-- Bootstrap JS Bundle-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="../assets/js/main.js"></script>
-    
+<div id="footer-placeholder"></div>
+
+<!-- Bootstrap JS Bundle-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="../assets/js/main.js"></script>
 </body>
 </html> 

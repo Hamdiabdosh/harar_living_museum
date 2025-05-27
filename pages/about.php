@@ -38,24 +38,24 @@ include '../includes/navbar.php';
             <h2 class="mb-4">Cultural Significance</h2>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
+                    <div class="card h-100 cultural-card">
+                        <div class="card-body text-white" style="background: url('../assets/images/banner/harar-mosque.jpg') center/cover;">
                             <h3 class="h5"><i class="fas fa-mosque me-2"></i>Islamic Heritage</h3>
                             <p>Home to 82 mosques and 102 shrines, Harar is a center of Islamic learning and spirituality in East Africa.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
+                    <div class="card h-100 cultural-card">
+                        <div class="card-body text-white" style="background: url('../assets/images/banner/arc.jpg') center/cover;">
                             <h3 class="h5"><i class="fas fa-palette me-2"></i>Arts & Architecture</h3>
                             <p>Traditional Harari houses, with their distinctive interior designs and colorful facades, showcase unique architectural heritage.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
+                    <div class="card h-100 cultural-card">
+                        <div class="card-body text-white" style="background: url('../assets/images/banner/Harar-Coffee.jpeg') center/cover;">
                             <h3 class="h5"><i class="fas fa-coffee me-2"></i>Coffee Culture</h3>
                             <p>Experience the world-famous Harari coffee ceremony, a UNESCO-recognized cultural tradition.</p>
                         </div>
@@ -124,5 +124,36 @@ include '../includes/navbar.php';
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="../assets/js/main.js"></script>
+
+    <style>
+    .cultural-card {
+        border: none;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+
+    .cultural-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .cultural-card .card-body {
+        height: 100%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .cultural-card h3 {
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+
+    .cultural-card p {
+        margin-bottom: 0;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    </style>
 </body>
 </html> 

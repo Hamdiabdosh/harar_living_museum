@@ -27,43 +27,15 @@ header('Content-Type: text/html; charset=utf-8');
 
     <main>
         <!-- Hero Section -->
-        <section class="hero-section position-relative text-white py-5" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/images/harar-festival.jpg') center/cover;">
+        <section class="hero-section position-relative text-white py-5" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/images/banner/shewal eid2.jpg') center/cover;">
             <div class="container">
                 <div class="row min-vh-50 align-items-center">
                     <div class="col-lg-8">
-                        <h1 class="display-4 fw-bold mb-4">Events Calendar</h1>
-                        <p class="lead">Experience Harar's living culture year-round — discover what's happening in the city!</p>
+                        <h1 class="display-4 fw-bold mb-4">Cultural Events & Festivities</h1>
+                        <p class="lead">Harar is alive with timeless festivals and cultural celebrations. Below is a calendar of key events that keep the city vibrant year-round.</p>
                         <div class="mt-4">
                             <a href="#upcoming-events" class="btn btn-primary me-2">Upcoming Events</a>
                             <a href="#calendar" class="btn btn-outline-light">View Calendar</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Event Categories & Filters -->
-        <section class="py-4 bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="d-flex justify-content-center flex-wrap gap-2">
-                            <button class="btn btn-outline-primary active" data-category="all">All Events</button>
-                            <button class="btn btn-outline-primary" data-category="religious">
-                                <i class="fas fa-mosque me-2"></i>Religious
-                            </button>
-                            <button class="btn btn-outline-primary" data-category="festival">
-                                <i class="fas fa-masks-theater me-2"></i>Festival/Cultural
-                            </button>
-                            <button class="btn btn-outline-primary" data-category="educational">
-                                <i class="fas fa-book me-2"></i>Educational
-                            </button>
-                            <button class="btn btn-outline-primary" data-category="tour">
-                                <i class="fas fa-map-marked-alt me-2"></i>Guided Tours
-                            </button>
-                            <button class="btn btn-outline-primary" data-category="exhibit">
-                                <i class="fas fa-palette me-2"></i>Exhibits
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -77,28 +49,28 @@ header('Content-Type: text/html; charset=utf-8');
                 <div class="row">
                     <div class="col-md-6 mb-4">
                         <div class="card h-100">
-                            <img src="../assets/images/events/ashura.jpg" class="card-img-top" alt="Ashura Celebration">
+                            <img src="../assets/images/events/shewa-eid.jpg" class="card-img-top" alt="Shewa Eid Celebration">
                             <div class="card-body">
-                                <h3 class="h5">Ashura Celebration</h3>
-                                <p class="text-muted"><i class="fas fa-calendar me-2"></i>Date: Varies (Islamic Calendar)</p>
-                                <p>Experience the vibrant Ashura celebrations in Harar, featuring traditional processions, prayers, and community gatherings.</p>
+                                <h3 class="h5">Shewa Eid (Eid al-Fitr)</h3>
+                                <p class="text-muted"><i class="fas fa-calendar me-2"></i>Date: Varies (After Ramadan)</p>
+                                <p>Experience the vibrant Shewa Eid celebrations in Harar, featuring traditional prayers, family gatherings, and community feasts.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <span class="badge bg-primary">Religious</span>
-                                    <button class="btn btn-outline-primary btn-sm">Notify Me</button>
+                                    <button class="btn btn-outline-primary btn-sm">Learn More</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 mb-4">
                         <div class="card h-100">
-                            <img src="../assets/images/events/hyena-festival.jpg" class="card-img-top" alt="Hyena Festival">
+                            <img src="../assets/images/events/ashura.jpg" class="card-img-top" alt="Ashura Commemoration">
                             <div class="card-body">
-                                <h3 class="h5">Hyena Festival</h3>
-                                <p class="text-muted"><i class="fas fa-calendar me-2"></i>Date: Annual Event</p>
-                                <p>Witness the unique tradition of hyena feeding, a practice that has been part of Harar's culture for generations.</p>
+                                <h3 class="h5">Ashura Commemoration</h3>
+                                <p class="text-muted"><i class="fas fa-calendar me-2"></i>Date: Varies (Islamic Calendar)</p>
+                                <p>Join the solemn Ashura observances, featuring traditional processions, prayers, and community gatherings in Harar's historic mosques.</p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <span class="badge bg-success">Cultural</span>
-                                    <button class="btn btn-outline-primary btn-sm">Notify Me</button>
+                                    <span class="badge bg-primary">Religious</span>
+                                    <button class="btn btn-outline-primary btn-sm">Learn More</button>
                                 </div>
                             </div>
                         </div>
@@ -112,12 +84,175 @@ header('Content-Type: text/html; charset=utf-8');
             <div class="container">
                 <h2 class="text-center mb-5">Event Calendar</h2>
                 <div class="row">
-                    <div class="col-12">
-                        <div id="calendar-container"></div>
+                    <div class="col-lg-8 mx-auto">
+                        <div id="calendar-container" class="calendar-wrapper"></div>
+                        <!-- Event Details Modal -->
+                        <div class="modal fade" id="eventDetailsModal" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Event Details</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div id="eventDetailsContent"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <style>
+        .calendar-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .fc {
+            font-size: 0.9em;
+        }
+        
+        .fc .fc-toolbar {
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .fc .fc-toolbar-title {
+            font-size: 1.2em;
+        }
+        
+        .fc .fc-button {
+            padding: 0.3em 0.6em;
+            font-size: 0.9em;
+        }
+        
+        .fc-event {
+            cursor: pointer;
+            padding: 2px 4px;
+            margin: 1px 0;
+        }
+        
+        .fc-event:hover {
+            opacity: 0.9;
+        }
+        
+        .event-details {
+            padding: 15px;
+        }
+        
+        .event-details h4 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .event-details p {
+            margin-bottom: 5px;
+            color: #666;
+        }
+        
+        .event-details .badge {
+            margin-right: 5px;
+        }
+        </style>
+
+        <script>
+        // Initialize FullCalendar
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar-container');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek'
+                },
+                height: 'auto',
+                events: [
+                    {
+                        title: 'Shewa Eid',
+                        start: '2024-04-10',
+                        description: 'Celebration of Eid al-Fitr in Harar',
+                        location: 'Various Mosques',
+                        category: 'Religious',
+                        className: 'bg-primary'
+                    },
+                    {
+                        title: 'Traditional Storytelling Night',
+                        start: '2024-04-10',
+                        description: 'Local elders sharing tales of Harar\'s history',
+                        location: 'Old City Cultural Center',
+                        category: 'Cultural',
+                        className: 'bg-info'
+                    },
+                    {
+                        title: 'Weekly Market Day',
+                        start: '2024-04-15',
+                        description: 'Local crafts, foods, and cultural performances',
+                        location: 'Main Market Square',
+                        category: 'Market',
+                        className: 'bg-success'
+                    },
+                    {
+                        title: 'Ashura Commemoration',
+                        start: '2024-04-20',
+                        description: 'Traditional processions and prayers',
+                        location: 'Historic Mosques',
+                        category: 'Religious',
+                        className: 'bg-primary'
+                    }
+                ],
+                eventClick: function(info) {
+                    showEventDetails(info.event);
+                }
+            });
+            calendar.render();
+        });
+
+        // Function to show event details in modal
+        function showEventDetails(event) {
+            const modal = new bootstrap.Modal(document.getElementById('eventDetailsModal'));
+            const content = document.getElementById('eventDetailsContent');
+            
+            const eventDate = new Date(event.start).toLocaleDateString('en-US', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            
+            content.innerHTML = `
+                <div class="event-details">
+                    <h4>${event.title}</h4>
+                    <p><i class="fas fa-calendar me-2"></i>${eventDate}</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>${event.extendedProps.location}</p>
+                    <p><i class="fas fa-info-circle me-2"></i>${event.extendedProps.description}</p>
+                    <div class="mt-3">
+                        <span class="badge ${event.className}">${event.extendedProps.category}</span>
+                    </div>
+                    <div class="mt-3">
+                        <button class="btn btn-primary btn-sm" onclick="addToTripPlan('${event.title}')">
+                            Add to Trip Plan
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            modal.show();
+        }
+
+        // Function to add event to trip plan
+        function addToTripPlan(eventTitle) {
+            // You can implement the trip plan functionality here
+            alert(`Added "${eventTitle}" to your trip plan!`);
+        }
+        </script>
 
         <!-- Upcoming Events -->
         <section id="upcoming-events" class="py-5">
@@ -131,14 +266,15 @@ header('Content-Type: text/html; charset=utf-8');
                                 <div class="row">
                                     <div class="col-md-3 text-center">
                                         <div class="date-box p-3 bg-primary text-white rounded">
-                                            <h3 class="h2 mb-0">15</h3>
-                                            <p class="mb-0">March</p>
+                                            <h3 class="h2 mb-0">10</h3>
+                                            <p class="mb-0">April</p>
                                         </div>
                                     </div>
                                     <div class="col-md-9">
-                                        <h3 class="h5">Traditional Coffee Ceremony</h3>
-                                        <p class="text-muted"><i class="fas fa-clock me-2"></i>2:00 PM - 4:00 PM</p>
-                                        <p>Experience the traditional Harari coffee ceremony, learn about its cultural significance, and enjoy authentic coffee preparation.</p>
+                                        <h3 class="h5">Traditional Storytelling Night</h3>
+                                        <p class="text-muted"><i class="fas fa-clock me-2"></i>7:00 PM - 9:00 PM</p>
+                                        <p class="text-muted"><i class="fas fa-map-marker-alt me-2"></i>Old City, Cultural Center</p>
+                                        <p>Experience the ancient tradition of Harari storytelling, featuring local elders sharing tales of Harar's rich history and folklore.</p>
                                         <div class="d-flex justify-content-between align-items-center">
                                             <span class="badge bg-info">Cultural</span>
                                             <button class="btn btn-primary btn-sm">Add to Trip Plan</button>
@@ -154,73 +290,21 @@ header('Content-Type: text/html; charset=utf-8');
                                 <div class="row">
                                     <div class="col-md-3 text-center">
                                         <div class="date-box p-3 bg-primary text-white rounded">
-                                            <h3 class="h2 mb-0">20</h3>
-                                            <p class="mb-0">March</p>
+                                            <h3 class="h2 mb-0">15</h3>
+                                            <p class="mb-0">April</p>
                                         </div>
                                     </div>
                                     <div class="col-md-9">
-                                        <h3 class="h5">Islamic Art Exhibition</h3>
-                                        <p class="text-muted"><i class="fas fa-clock me-2"></i>10:00 AM - 6:00 PM</p>
-                                        <p>Explore the rich tradition of Islamic art in Harar, featuring calligraphy, architecture, and traditional crafts.</p>
+                                        <h3 class="h5">Weekly Market Day</h3>
+                                        <p class="text-muted"><i class="fas fa-clock me-2"></i>8:00 AM - 4:00 PM</p>
+                                        <p class="text-muted"><i class="fas fa-map-marker-alt me-2"></i>Main Market Square</p>
+                                        <p>Visit Harar's vibrant weekly market, featuring local crafts, traditional foods, and cultural performances.</p>
                                         <div class="d-flex justify-content-between align-items-center">
-                                            <span class="badge bg-warning">Exhibit</span>
+                                            <span class="badge bg-success">Market</span>
                                             <button class="btn btn-primary btn-sm">Add to Trip Plan</button>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Event Submission Form -->
-        <section class="py-5 bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="card">
-                            <div class="card-body">
-                                <h2 class="text-center mb-4">Submit an Event</h2>
-                                <form>
-                                    <div class="mb-3">
-                                        <label for="eventTitle" class="form-label">Event Title</label>
-                                        <input type="text" class="form-control" id="eventTitle" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="eventDate" class="form-label">Date</label>
-                                        <input type="date" class="form-control" id="eventDate" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="eventTime" class="form-label">Time</label>
-                                        <input type="time" class="form-control" id="eventTime" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="eventCategory" class="form-label">Category</label>
-                                        <select class="form-select" id="eventCategory" required>
-                                            <option value="">Select category...</option>
-                                            <option value="religious">Religious</option>
-                                            <option value="festival">Festival/Cultural</option>
-                                            <option value="educational">Educational</option>
-                                            <option value="tour">Guided Tour</option>
-                                            <option value="exhibit">Exhibit</option>
-                                        </select>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="eventDescription" class="form-label">Description</label>
-                                        <textarea class="form-control" id="eventDescription" rows="3" required></textarea>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="eventLocation" class="form-label">Location</label>
-                                        <input type="text" class="form-control" id="eventLocation" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="eventImage" class="form-label">Event Image</label>
-                                        <input type="file" class="form-control" id="eventImage" accept="image/*">
-                                    </div>
-                                    <button type="submit" class="btn btn-primary w-100">Submit Event</button>
-                                </form>
                             </div>
                         </div>
                     </div>
@@ -244,7 +328,6 @@ header('Content-Type: text/html; charset=utf-8');
         </section>
     </main>
 
-    
     <div id="footer-placeholder"></div>
 
     <!-- Bootstrap JS Bundle-->
@@ -265,37 +348,6 @@ header('Content-Type: text/html; charset=utf-8');
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;
             });
-
-        // Initialize FullCalendar
-        document.addEventListener('DOMContentLoaded', function() {
-            var calendarEl = document.getElementById('calendar-container');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth',
-                headerToolbar: {
-                    left: 'prev,next today',
-                    center: 'title',
-                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
-                },
-                events: [
-                    {
-                        title: 'Ashura Celebration',
-                        start: '2024-03-15',
-                        className: 'bg-primary'
-                    },
-                    {
-                        title: 'Traditional Coffee Ceremony',
-                        start: '2024-03-20',
-                        className: 'bg-success'
-                    },
-                    {
-                        title: 'Islamic Art Exhibition',
-                        start: '2024-03-25',
-                        className: 'bg-warning'
-                    }
-                ]
-            });
-            calendar.render();
-        });
 
         // Event filtering
         document.querySelectorAll('[data-category]').forEach(button => {

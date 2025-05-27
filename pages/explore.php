@@ -21,8 +21,11 @@ header('Content-Type: text/html; charset=utf-8');
 <body>
     <?php include '../includes/background.php'; ?>
     <header>
+        
         <!-- Include Navbar -->
-        <?php include '../includes/navbar.php'; ?>
+        <?php 
+        include '../includes/header.php';
+        include '../includes/navbar.php'; ?>
     </header>
 
     <main>

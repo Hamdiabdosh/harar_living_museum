@@ -6,6 +6,8 @@
             <button type="button" data-bs-target="#aboutHeroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#aboutHeroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#aboutHeroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#aboutHeroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#aboutHeroCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
         </div>
 
         <!-- Carousel Items -->
@@ -57,6 +59,42 @@
                                 <div class="mt-4">
                                     <a href="#architecture" class="btn btn-primary me-2">Explore Buildings</a>
                                     <a href="#design" class="btn btn-outline-light">Traditional Design</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4 - Coffee -->
+            <div class="carousel-item">
+                <div class="carousel-image" style="background: url('../assets/images/banner/Harar-Coffee.jpeg') center/100% no-repeat;">
+                    <div class="container">
+                        <div class="row min-vh-50 align-items-center">
+                            <div class="col-lg-8">
+                                <h1 class="display-4 fw-bold mb-4 text-white text-shadow">Coffee Culture</h1>
+                                <p class="lead text-white text-shadow">Experience the world-famous Harari coffee ceremony, a UNESCO-recognized cultural tradition</p>
+                                <div class="mt-4">
+                                    <a href="#coffee" class="btn btn-primary me-2">Coffee Ceremony</a>
+                                    <a href="#traditions" class="btn btn-outline-light">Local Traditions</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5 - Hyena Feeding -->
+            <div class="carousel-item">
+                <div class="carousel-image" style="background: url('../assets/images/banner/hyena_feeding.jpg') center/100% no-repeat;">
+                    <div class="container">
+                        <div class="row min-vh-50 align-items-center">
+                            <div class="col-lg-8">
+                                <h1 class="display-4 fw-bold mb-4 text-white text-shadow">Hyena Feeding</h1>
+                                <p class="lead text-white text-shadow">Witness the unique tradition of hyena feeding, a centuries-old practice in Harar</p>
+                                <div class="mt-4">
+                                    <a href="#hyena" class="btn btn-primary me-2">Learn More</a>
+                                    <a href="#traditions" class="btn btn-outline-light">Cultural Practices</a>
                                 </div>
                             </div>
                         </div>
