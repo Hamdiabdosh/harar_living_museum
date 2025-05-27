@@ -18,7 +18,9 @@ header('Content-Type: text/html; charset=utf-8');
 <body>
     <header>
         <!-- Include Navbar -->
-        <?php include '../includes/navbar.php'; ?>
+        <nav>
+            <?php include '../includes/navbar.php'; ?>
+        </nav>
     </header>
 
     <main>
