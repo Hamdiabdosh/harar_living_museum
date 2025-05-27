@@ -21,3 +21,4 @@ $basePath = $isPage ? '../' : '';
     <link rel="stylesheet" href="<?php echo $basePath; ?>assets/css/main.css">
 </head>
 <body>
+    <?php include $basePath . 'includes/background.php'; ?>
