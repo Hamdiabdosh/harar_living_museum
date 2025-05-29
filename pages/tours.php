@@ -24,20 +24,14 @@ header('Content-Type: text/html; charset=utf-8');
 
     <main>
         <!-- Hero Section -->
-        <section class="hero-section position-relative text-white py-5" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/images/harar-tour.jpg') center/cover;">
-            <div class="container">
-                <div class="row min-vh-50 align-items-center">
-                    <div class="col-lg-8">
-                        <h1 class="display-4 fw-bold mb-4">Guided Tours of Harar</h1>
-                        <p class="lead">Explore Harar with those who know it best — from local guides to historical walking routes. Whether you prefer guided walks or solo exploration, we have suggestions for every traveler.</p>
-                        <div class="mt-4">
-                            <a href="#guided-tours" class="btn btn-primary me-2">View Tours</a>
-                            <a href="#booking" class="btn btn-outline-light">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <?php include '../includes/HeroTurism.php';
+
+        // Render the hero section
+        renderHeroSection(
+            "Discover Harar Through Guided Tours",
+            "Experience the magic of Harar with our carefully curated tours, led by local experts who know every corner of this historic city.",
+            "Let our experienced guides show you the hidden gems and authentic experiences that make Harar truly special."
+        ); ?>
 
         <!-- Local Guided Tours -->
         <section id="guided-tours" class="py-5">

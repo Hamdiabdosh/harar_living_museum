@@ -88,6 +88,47 @@ include '../includes/navbar.php';
             </div>
         </section>
 
+        <!-- UNESCO Recognitions -->
+        <section id="unesco" class="mb-5">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <img src="../assets/images/banner/unisco.jpg" alt="UNESCO Heritage Site" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="mb-4">Global Recognition</h2>
+                    <p class="lead fw-bold">Did you know? Harar isn't just a city | it's a global treasure!</p>
+                    <p>Harar holds an extraordinary record with 5 major international recognitions, making it one of the most celebrated heritage cities in the world:</p>
+                    <div class="achievements-list">
+                        <div class="achievement-item mb-3">
+                            <h3 class="h5"><i class="fas fa-award me-2 text-primary"></i>UNESCO World Heritage Site</h3>
+                            <p class="mb-0">The iconic Jugol Wall and ancient city architecture.</p>
+                        </div>
+                        <div class="achievement-item mb-3">
+                            <h3 class="h5"><i class="fas fa-peace me-2 text-primary"></i>UNESCO Peace Prize Award</h3>
+                            <p class="mb-0">Honored for promoting peace and coexistence.</p>
+                        </div>
+                        <div class="achievement-item mb-3">
+                            <h3 class="h5"><i class="fas fa-city me-2 text-primary"></i>Member of OWHC</h3>
+                            <p class="mb-0">Recognized by the Organization of World Heritage Cities.</p>
+                        </div>
+                        <div class="achievement-item mb-3">
+                            <h3 class="h5"><i class="fas fa-drum me-2 text-primary"></i>UNESCO Intangible Heritage List</h3>
+                            <p class="mb-0">The vibrant Shuwalid Festival lives on in cultural memory.</p>
+                        </div>
+                        <div class="achievement-item mb-3">
+                            <h3 class="h5"><i class="fas fa-globe me-2 text-primary"></i>Member of WTCF</h3>
+                            <p class="mb-0">A proud city in the World Tourism Cities Federation network.</p>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <p class="fst-italic">What makes Harar truly unique is not just its history but its living culture, unmatched heritage, deep-rooted peace, and the spirit of its people. It's more than words can describe - Harar must be experienced.</p>
+                        <p class="fw-bold">This is not just recognition… It's a legacy. A pride. A responsibility.<br>
+                        Harar, the jewel of heritage and peace.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Project Purpose -->
         <section id="purpose" class="mb-5">
             <h2 class="mb-4">About This Project</h2>

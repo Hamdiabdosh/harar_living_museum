@@ -23,22 +23,16 @@ header('Content-Type: text/html; charset=utf-8');
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero-section position-relative text-white py-5" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/images/harar-streets.jpg') center/cover;">
-            <div class="container">
-                <div class="row min-vh-50 align-items-center">
-                    <div class="col-lg-8">
-                        <h1 class="display-4 fw-bold mb-4">Travel Tips for Harar</h1>
-                        <p class="lead">First time visiting Harar? These tips will help you blend in, stay safe, and get the most out of your journey.</p>
-                        <div class="mt-4">
-                            <a href="#language" class="btn btn-primary me-2">Language Basics</a>
-                            <a href="#etiquette" class="btn btn-outline-light">Cultural Etiquette</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-asdfsdfadf
+        <!-- Hero Section -->   
+        <?php include '../includes/HeroTurism.php';
+
+        // Render the hero section
+        renderHeroSection(
+            "Essential Travel Tips for Harar",
+            "Make the most of your visit to Harar with our comprehensive guide to local customs, best practices, and insider knowledge.",
+            "A well-prepared traveler is a happy traveler. Let us help you navigate the wonders of Harar with confidence."
+        ); ?>
+
         <!-- Language Basics -->
         <section id="language" class="py-5">
             <div class="container">

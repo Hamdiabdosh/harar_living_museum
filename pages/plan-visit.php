@@ -24,20 +24,14 @@ header('Content-Type: text/html; charset=utf-8');
 
     <main>
         <!-- Hero Section -->
-        <section class="hero-section position-relative text-white py-5" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/images/harar-streets.jpg') center/cover;">
-            <div class="container">
-                <div class="row min-vh-50 align-items-center">
-                    <div class="col-lg-8">
-                        <h1 class="display-4 fw-bold mb-4">Plan Your Visit to Harar</h1>
-                        <p class="lead">Your journey to Ethiopia's living museum begins here. Let us help you prepare for an unforgettable experience.</p>
-                        <div class="mt-4">
-                            <a href="#getting-here" class="btn btn-primary me-2">Getting Here</a>
-                            <a href="#accommodation" class="btn btn-outline-light">Where to Stay</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <?php include '../includes/HeroTurism.php';
+
+        // Render the hero section
+        renderHeroSection(
+            "Plan Your Perfect Visit to Harar",
+            "Everything you need to know to plan an unforgettable journey to this UNESCO World Heritage site.",
+            "Your adventure in Harar begins with careful planning. Let us help you create memories that will last a lifetime."
+        ); ?>
 
         <!-- Quick Highlights -->
         <section class="py-5">

@@ -327,7 +327,7 @@ header('Content-Type: text/html; charset=utf-8');
             </div>
         </section>
     </main>
-
+    
     <div id="footer-placeholder"></div>
 
     <!-- Bootstrap JS Bundle-->
@@ -347,7 +347,7 @@ header('Content-Type: text/html; charset=utf-8');
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;
-            });
+        });
 
         // Event filtering
         document.querySelectorAll('[data-category]').forEach(button => {
