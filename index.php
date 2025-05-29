@@ -8,6 +8,9 @@ $pageTitle = 'Home';
 // Include header
 include 'includes/header.php';
 
+// Add background CSS
+echo '<link rel="stylesheet" href="assets/css/background.css">';
+
 // Include navbar
 include 'includes/navbar.php';
 ?>
