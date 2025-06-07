@@ -6,17 +6,17 @@ header('Content-Type: text/html; charset=utf-8');
 $pageTitle = 'About';
 
 // Include header
-include '../includes/header.php';
+include '../includes/layouts/header.php';
 
 // Include navbar
-include '../includes/navbar.php';
+include '../includes/components/navbar.php';
 ?>
 
 <body>
-    <?php include '../includes/background.php'; ?>
+    <?php ; ?>
     <header>
         <!-- Include Hero Section -->
-        <?php include '../includes/HeroForAbout.php'; ?>
+        <?php include '../includes/heroes/hero-about.php'; ?>
     </header>
 
     <main class="container py-5">
@@ -158,7 +158,7 @@ include '../includes/navbar.php';
 
     <?php
     // Include footer
-    include '../includes/footer.php';
+    include '../includes/components/footer.php';
     ?>
 
     <!-- Bootstrap JS Bundle-->

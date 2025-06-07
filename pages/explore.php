@@ -1,6 +1,15 @@
 <?php
-require_once '../includes/header.php';
-require_once '../includes/navbar.php';
+// Set content type
+header('Content-Type: text/html; charset=utf-8');
+
+// Set page title
+$pageTitle = 'Explore';
+
+// Include header
+include '../includes/layouts/header.php';
+
+// Include navbar
+include '../includes/components/navbar.php';
 ?>
 
 <div class="container-fluid px-4 py-5">
@@ -24,6 +33,9 @@ require_once '../includes/navbar.php';
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="eagle-tab" data-bs-toggle="tab" data-bs-target="#eagle" type="button" role="tab" aria-controls="eagle" aria-selected="false">Eagle Feeding</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="hyena-tab" data-bs-toggle="tab" data-bs-target="#hyena" type="button" role="tab" aria-controls="hyena" aria-selected="false">Hyena Feeding</button>
                 </li>
             </ul>
 
@@ -553,13 +565,93 @@ require_once '../includes/navbar.php';
                         </div>
                     </div>
                 </div>
+
+                <!-- Hyena Feeding Section -->
+                <div class="tab-pane fade" id="hyena" role="tabpanel" aria-labelledby="hyena-tab">
+                    <div class="hyena-content">
+                        <h2 class="mb-4 text-center">Hyena Feeding in Harar</h2>
+                        <p class="lead mb-5 text-center">
+                            Experience the world-famous hyena feeding ceremony, a unique tradition that has made Harar one of the few places where humans and hyenas coexist peacefully.
+                        </p>
+
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <div class="card shadow-lg">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <div id="hyenaFeedingCarousel" class="carousel slide h-100" data-bs-ride="carousel">
+                                                <div class="carousel-inner h-100">
+                                                    <div class="carousel-item active h-100">
+                                                        <img src="../assets/images/new/hyena feeding.jpg" class="d-block w-100 h-100" alt="Hyena Feeding" style="object-fit: cover;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h3 class="card-title">A Centuries-Old Tradition</h3>
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <span class="badge bg-primary me-2">Cultural Heritage</span>
+                                                    <small class="text-muted">Nightly Ceremony</small>
+                                                </div>
+                                                <p class="card-text">
+                                                    The hyena feeding ceremony in Harar is a tradition that dates back centuries. The city's residents have developed a unique relationship with these wild animals, feeding them by hand and even allowing them to roam the streets at night, acting as natural garbage collectors.
+                                                </p>
+                                                <div class="row mt-4">
+                                                    <div class="col-md-6">
+                                                        <h5>The Experience</h5>
+                                                        <ul class="list-unstyled">
+                                                            <li class="mb-3">
+                                                                <i class="fas fa-moon text-primary me-2"></i>
+                                                                Nightly feeding ceremony outside the city walls
+                                                            </li>
+                                                            <li class="mb-3">
+                                                                <i class="fas fa-hand-holding-heart text-primary me-2"></i>
+                                                                Watch as hyenas are called by name and fed by hand
+                                                            </li>
+                                                            <li>
+                                                                <i class="fas fa-camera text-primary me-2"></i>
+                                                                Unique photo opportunities with these magnificent creatures
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <h5>Visitor Information</h5>
+                                                        <div class="card bg-light">
+                                                            <div class="card-body">
+                                                                <ul class="list-unstyled mb-0">
+                                                                    <li class="mb-2">
+                                                                        <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                                                                        Location: Outside the city walls (Erer Gate)
+                                                                    </li>
+                                                                    <li class="mb-2">
+                                                                        <i class="fas fa-clock text-primary me-2"></i>
+                                                                        Best Time: After sunset (around 7 PM)
+                                                                    </li>
+                                                                    <li>
+                                                                        <i class="fas fa-info-circle text-primary me-2"></i>
+                                                                        Small fee for participation
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 <?php
-require_once '../includes/footer.php';
+require_once '../includes/components/footer.php';
 ?>
 
 <!-- Add Bootstrap JS and Popper.js -->

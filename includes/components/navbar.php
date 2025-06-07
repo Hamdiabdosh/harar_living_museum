@@ -21,7 +21,7 @@ $basePath = $isPage ? '../' : '';
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo $basePath; ?>pages/ExploreOld.php">Explore</a>
+                    <a class="nav-link" href="<?php echo $basePath; ?>pages/explore.php">Explore</a>
                 </li>
                 
                 <li class="nav-item dropdown">

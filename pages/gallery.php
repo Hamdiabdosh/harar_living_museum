@@ -19,10 +19,10 @@ header('Content-Type: text/html; charset=utf-8');
     <link rel="stylesheet" href="../assets/css/gallery.css">
 </head>
 <body>
-    <?php include '../includes/background.php'; ?>
+    <?php ; ?>
     <header>
         <!-- Include Navbar -->
-        <?php include '../includes/navbar.php'; ?>
+        <?php include '../includes/components/navbar.php'; ?>
     </header>
 
     <main>

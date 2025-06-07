@@ -6,10 +6,10 @@ header('Content-Type: text/html; charset=utf-8');
 $pageTitle = 'Heritage';
 
 // Include header
-include '../includes/header.php';
+include '../includes/layouts/header.php';
 
 // Include navbar
-include '../includes/navbar.php';
+include '../includes/components/navbar.php';
 ?>
 
     <main>

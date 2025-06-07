@@ -1,6 +1,15 @@
 <?php
 // Set content type
 header('Content-Type: text/html; charset=utf-8');
+
+// Set page title
+$pageTitle = 'Register';
+
+// Include header
+include '../includes/layouts/header.php';
+
+// Include navbar
+include '../includes/components/navbar.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,10 +24,10 @@ header('Content-Type: text/html; charset=utf-8');
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-    <?php include '../includes/background.php'; ?>
+    <?php ; ?>
     <header>
         <nav>
-            <?php include '../includes/navbar.php'; ?>
+            <?php include '../includes/components/navbar.php'; ?>
         </nav>
     </header>
 
@@ -162,7 +171,7 @@ header('Content-Type: text/html; charset=utf-8');
         </section>
     </main>
 
-    <?php include '../includes/footer.php'; ?>
+    <?php include '../includes/components/footer.php'; ?>
 
     <!-- Bootstrap JS Bundle-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

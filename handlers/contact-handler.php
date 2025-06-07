@@ -1,5 +1,5 @@
 <?php
-require_once 'db_connect.php';
+require_once '../config/database.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);

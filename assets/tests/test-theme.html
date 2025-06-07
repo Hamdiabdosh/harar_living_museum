@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Test</title>
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .test-container {
+            padding: 20px;
+            margin: 20px;
+        }
+        .test-card {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>Theme System Test</h1>
+        
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+        </button>
+
+        <!-- Test Components -->
+        <div class="card test-card">
+            <div class="card-body">
+                <h5 class="card-title">Card Test</h5>
+                <p class="card-text">Testing card component in both themes</p>
+                <button class="btn btn-primary">Primary Button</button>
+                <button class="btn btn-outline-primary">Outline Button</button>
+            </div>
+        </div>
+
+        <div class="bg-light p-3">
+            <p>Testing background light class</p>
+        </div>
+
+        <div class="bg-primary text-white p-3">
+            <p>Testing primary background</p>
+        </div>
+    </div>
+
+    <script src="assets/js/theme.js"></script>
+    <script src="test-theme.js"></script>
+</body>
+</html> 

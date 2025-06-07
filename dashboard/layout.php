@@ -5,7 +5,7 @@ require_once '../config/database.php';
 // Security check
 function checkAuth() {
     if (!isset($_SESSION['user_id'])) {
-        header('Location: /login.php');
+        header('Location: ../pages/login.php');
         exit();
     }
 }
@@ -53,28 +53,28 @@ function renderHeader($title) {
         <title><?php echo htmlspecialchars($title); ?> - Harar Living Museum</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-        <link href="/assets/css/dashboard.css" rel="stylesheet">
+        <link href="../assets/css/dashboard.css" rel="stylesheet">
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/dashboard/">Harar Living Museum</a>
+                <a class="navbar-brand" href="../dashboard/">Harar Living Museum</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="/dashboard/user.php">Dashboard</a>
+                            <a class="nav-link" href="../dashboard/user.php">Dashboard</a>
                         </li>
                         <?php if (isContributor()): ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="/dashboard/contribute.php">Contribute</a>
+                            <a class="nav-link" href="../dashboard/contribute.php">Contribute</a>
                         </li>
                         <?php endif; ?>
                         <?php if (isAdmin()): ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="/dashboard/admin.php">Admin Panel</a>
+                            <a class="nav-link" href="../dashboard/admin.php">Admin Panel</a>
                         </li>
                         <?php endif; ?>
                     </ul>
@@ -91,8 +91,8 @@ function renderHeader($title) {
                                 <?php echo htmlspecialchars($userData['full_name'] ?? 'User'); ?>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="/dashboard/profile.php">Profile</a></li>
-                                <li><a class="dropdown-item" href="/dashboard/settings.php">Settings</a></li>
+                                <li><a class="dropdown-item" href="../dashboard/profile.php">Profile</a></li>
+                                <li><a class="dropdown-item" href="../dashboard/settings.php">Settings</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="#" onclick="logout()">Logout</a></li>
                             </ul>
@@ -113,17 +113,29 @@ function renderFooter() {
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
         function logout() {
-            fetch('/auth_handler.php', {
+            fetch('../handlers/auth_handler.php', {
                 method: 'POST',
-                body: new FormData({
-                    action: 'logout'
-                })
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'action=logout'
             })
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
             .then(data => {
                 if (data.success) {
-                    window.location.href = '/login.php';
+                    window.location.href = '../pages/login.php';
+                } else {
+                    alert('Logout failed: ' + (data.message || 'Unknown error'));
                 }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred during logout. Please try again.');
             });
         }
         </script>

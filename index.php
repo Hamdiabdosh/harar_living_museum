@@ -6,7 +6,7 @@ header('Content-Type: text/html; charset=utf-8');
 $pageTitle = 'Home';
 
 // Include header
-include 'includes/header.php';
+include 'includes/layouts/header.php';
 
 // Add background CSS
 echo '<link rel="stylesheet" href="assets/css/background.css">';
@@ -14,7 +14,7 @@ echo '<link rel="stylesheet" href="assets/css/theme.css">';
 echo '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">';
 
 // Include navbar
-include 'includes/navbar.php';
+include 'includes/components/navbar.php';
 ?>
 
 <main>
@@ -122,7 +122,7 @@ include 'includes/navbar.php';
 
 <?php
 // Include footer
-include 'includes/footer.php';
+include 'includes/components/footer.php';
 ?>
 
 <!-- Bootstrap JS Bundle-->

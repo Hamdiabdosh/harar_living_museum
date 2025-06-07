@@ -7,24 +7,28 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <!-- Navigation will be added here -->
-        </nav>
-    </header>
+    <!-- Set content type -->
+    <?php header('Content-Type: text/html; charset=utf-8'); ?>
+
+    <!-- Set page title -->
+    <?php $pageTitle = 'Error'; ?>
+
+    <!-- Include header -->
+    <?php include '../layouts/header.php'; ?>
+
+    <!-- Include navbar -->
+    <?php include '../components/navbar.php'; ?>
 
     <main>
         <section class="error-content">
             <h1>Oops! Something went wrong</h1>
             <p>We apologize for the inconvenience. Please try again later or contact our support team if the problem persists.</p>
-            <a href="index.html" class="btn">Return to Home</a>
+            <a href="<?php echo $basePath; ?>index.php" class="btn">Return to Home</a>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Harar Living Museum. All rights reserved.</p>
-    </footer>
+    <?php include '../components/footer.php'; ?>
 
-    <script src="assets/js/main.js"></script>
+    <script src="<?php echo $basePath; ?>assets/js/main.js"></script>
 </body>
 </html> 
