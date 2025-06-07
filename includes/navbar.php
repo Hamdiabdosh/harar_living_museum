@@ -3,7 +3,8 @@
 $isPage = strpos($_SERVER['PHP_SELF'], '/pages/') !== false;
 $basePath = $isPage ? '../' : '';
 ?>
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+<div class ="bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark  shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="<?php echo $basePath; ?>index.php">
             <img src="<?php echo $basePath; ?>assets/images/Horizontal-Logo.png" alt="Harar Living Museum" height="40">
@@ -20,7 +21,7 @@ $basePath = $isPage ? '../' : '';
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo $basePath; ?>pages/explore.php">Explore</a>
+                    <a class="nav-link" href="<?php echo $basePath; ?>pages/ExploreOld.php">Explore</a>
                 </li>
                 
                 <li class="nav-item dropdown">
@@ -50,11 +51,14 @@ $basePath = $isPage ? '../' : '';
                 </li>
         
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo $basePath; ?>pages/testimonials.php">Testimonials</a>
+                    <a class="nav-link" href="<?php echo $basePath; ?>pages/contact.php">Contact</a>
                 </li>
         
+                <!-- Theme Toggle -->
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo $basePath; ?>pages/contact.php">Contact</a>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
                 </li>
         
                 <!-- Login/Register -->
@@ -68,3 +72,4 @@ $basePath = $isPage ? '../' : '';
         </div>
     </div>
 </nav>
+</div>

@@ -39,15 +39,6 @@ CREATE TABLE bookings (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Testimonials table
-CREATE TABLE testimonials (
-    testimonial_id INT AUTO_INCREMENT PRIMARY KEY,
-    message TEXT NOT NULL,
-    photo VARCHAR(255),
-    approved BOOLEAN DEFAULT FALSE,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
 -- Events table
 CREATE TABLE events (
     event_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -95,4 +86,3 @@ CREATE INDEX idx_bookings_date ON bookings(tour_date);
 CREATE INDEX idx_bookings_status ON bookings(status);
 CREATE INDEX idx_media_type ON media_uploads(type);
 CREATE INDEX idx_media_approved ON media_uploads(approved);
-CREATE INDEX idx_testimonials_approved ON testimonials(approved);

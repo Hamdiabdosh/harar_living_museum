@@ -50,21 +50,21 @@ header('Content-Type: text/html; charset=utf-8');
                                         </div>
                                     </div>
 
-                                    <div class="mb-3">
-                                        <label for="password" class="form-label">Password</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text">
-                                                <i class="fas fa-lock"></i>
-                                            </span>
-                                            <input type="password" class="form-control" id="password" required>
-                                            <button class="btn btn-outline-secondary" type="button" id="togglePassword">
-                                                <i class="fas fa-eye"></i>
-                                            </button>
-                                            <div class="invalid-feedback">
-                                                Please enter your password.
+                                        <div class="mb-3">
+                                            <label for="password" class="form-label">Password</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text">
+                                                    <i class="fas fa-lock"></i>
+                                                </span>
+                                                <input type="password" class="form-control" id="password" required>
+                                                <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                                <div class="invalid-feedback">
+                                                    Please enter your password.
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
                                     <div class="mb-3 form-check">
                                         <input type="checkbox" class="form-check-input" id="rememberMe">
@@ -83,18 +83,7 @@ header('Content-Type: text/html; charset=utf-8');
 
                                 <hr class="my-4">
 
-                                <!-- Social Login -->
-                                <div class="text-center">
-                                    <p class="text-muted mb-3">Or log in with</p>
-                                    <div class="d-grid gap-2">
-                                        <button type="button" class="btn btn-outline-primary">
-                                            <i class="fab fa-google me-2"></i>Continue with Google
-                                        </button>
-                                        <button type="button" class="btn btn-outline-primary">
-                                            <i class="fab fa-facebook-f me-2"></i>Continue with Facebook
-                                        </button>
-                                    </div>
-                                </div>
+                              
 
                                 <div class="text-center mt-4">
                                     <p class="mb-0">New here? <a href="register.php" class="text-decoration-none">Create an account</a></p>

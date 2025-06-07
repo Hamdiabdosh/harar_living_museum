@@ -37,7 +37,6 @@ try {
 
     // Get pending approvals
     $pendingQuery = "SELECT 
-        (SELECT COUNT(*) FROM testimonials WHERE approved = 0) as pending_testimonials,
         (SELECT COUNT(*) FROM media_uploads WHERE approved = 0) as pending_media";
     $pendingStmt = $db->query($pendingQuery);
     $pendingApprovals = $pendingStmt->fetch(PDO::FETCH_ASSOC);
@@ -61,7 +60,7 @@ try {
     $totalUsers = 0;
     $totalPlaces = 0;
     $totalBookings = 0;
-    $pendingApprovals = ['pending_testimonials' => 0, 'pending_media' => 0];
+    $pendingApprovals = ['pending_media' => 0];
     $recentActivities = [];
 }
 
@@ -99,7 +98,7 @@ renderHeader('Admin Dashboard');
             <div class="card-body">
                 <h5 class="card-title">Pending Approvals</h5>
                 <h2 class="mb-0">
-                    <?php echo number_format($pendingApprovals['pending_testimonials'] + $pendingApprovals['pending_media']); ?>
+                    <?php echo number_format($pendingApprovals['pending_media']); ?>
                 </h2>
             </div>
         </div>

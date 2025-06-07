@@ -27,11 +27,7 @@ header('Content-Type: text/html; charset=utf-8');
         <?php include '../includes/HeroTurism.php';
 
         // Render the hero section
-        renderHeroSection(
-            "Plan Your Perfect Visit to Harar",
-            "Everything you need to know to plan an unforgettable journey to this UNESCO World Heritage site.",
-            "Your adventure in Harar begins with careful planning. Let us help you create memories that will last a lifetime."
-        ); ?>
+        ?>
 
         <!-- Quick Highlights -->
         <section class="py-5">
