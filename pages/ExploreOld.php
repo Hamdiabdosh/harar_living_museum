@@ -1,6 +1,15 @@
 <?php
 // Set content type
 header('Content-Type: text/html; charset=utf-8');
+
+// Set page title
+$pageTitle = 'Explore Old City';
+
+// Include header
+include '../includes/layouts/header.php';
+
+// Include navbar
+include '../includes/components/navbar.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,14 +32,6 @@ header('Content-Type: text/html; charset=utf-8');
 </head>
 <body>
     <?php ; ?>
-    <header>
-        
-        <!-- Include Navbar -->
-        <?php 
-        include '../includes/layouts/header.php';
-        include '../includes/components/navbar.php'; ?>
-    </header>
-
     <main>
                 <!-- Hero Section -->
         <section class="hero-section position-relative text-white py-5" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/images/explore/hero-bg.jpg') center/cover;">

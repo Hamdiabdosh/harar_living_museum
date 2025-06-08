@@ -128,7 +128,7 @@ function renderFooter() {
             })
             .then(data => {
                 if (data.success) {
-                    window.location.href = '../pages/login.php';
+                    window.location.href = '../index.php';
                 } else {
                     alert('Logout failed: ' + (data.message || 'Unknown error'));
                 }

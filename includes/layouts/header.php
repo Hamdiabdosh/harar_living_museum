@@ -4,10 +4,12 @@ $isPage = strpos($_SERVER['PHP_SELF'], '/pages/') !== false;
 $basePath = $isPage ? '../' : '';
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Harar Living Museum - Discover the rich cultural heritage and vibrant traditions of Harar, a UNESCO World Heritage site.">
+    <meta name="keywords" content="Harar, Living Museum, UNESCO, Heritage, Culture, Ethiopia, Tourism">
     <title><?php echo isset($pageTitle) ? $pageTitle . ' - ' : ''; ?>Harar Living Museum</title>
     <!-- Favicon -->
     <link rel="icon" type="image/webp" href="<?php echo $basePath; ?>assets/images/logo.webp">
@@ -21,7 +23,10 @@ $basePath = $isPage ? '../' : '';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="<?php echo $basePath; ?>assets/css/main.css">
+    <link rel="stylesheet" href="<?php echo $basePath; ?>assets/css/theme.css">
+    <!-- Theme Script -->
+    <script src="<?php echo $basePath; ?>assets/js/theme.js" defer></script>
 </head>
-<body>
+<body class="bg-body">
 </body>
 </html>
